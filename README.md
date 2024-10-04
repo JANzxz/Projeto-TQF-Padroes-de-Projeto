@@ -1,3 +1,8 @@
-# Projeto-TQF-Padroes-de-Projeto
+# Projeto TQF - Padrões de Projeto
 
-Projeto da cadeira de Padroes de Projeto usando herança, polimorfismo e encapsulamento.
+Projeto da cadeira de **Padrões de Projeto** usando herança, polimorfismo e encapsulamento.
+
+### Autores:
+
+- João Vitor Pereira - @JANzxz;
+- Danilo Pereira - @d4nkali.
