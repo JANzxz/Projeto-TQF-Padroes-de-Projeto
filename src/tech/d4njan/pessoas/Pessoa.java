@@ -1,37 +1,51 @@
 package tech.d4njan.pessoas;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Pessoa {
 
     protected String nome;
-	protected String dataNascimento;
+    protected Date dataNascimento;
+
+    protected String dataTemporaria;
 
     Scanner sc = new Scanner(System.in);
+    SimpleDateFormat formatoData = new SimpleDateFormat("dd/MM/yyyy");
 
-    public String getNome() {
-        return nome;
-    }
+    // Gets e Sets
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+        public String getNome() {
+            return nome;
+        }
 
-    public String getDataNascimento() {
-        return dataNascimento;
-    }
+        public void setNome(String nome) {
+            this.nome = nome;
+        }
 
-    public void setDataNascimento(String dataNascimento) {
-        this.dataNascimento = dataNascimento;
-    }
+        public Date getDataNascimento() {
+            return dataNascimento;
+        }
+
+        public void setDataNascimento(Date dataNascimento) {
+            this.dataNascimento = dataNascimento;
+        }
 
     public void cadastrar() {
 
         System.out.print("Informe o nome: ");
         this.nome = sc.nextLine();
 
-        System.out.println("Informe a data de Nascimento: ");
-        this.dataNascimento = sc.nextLine();
+        System.out.print("Informe a data de Nascimento: ");
+        this.dataTemporaria = sc.nextLine();
+
+        try {
+            this.dataNascimento = formatoData.parse(dataTemporaria);
+        } catch (ParseException e) {
+            System.out.println("Erro ao cadastrar data.");
+        }
 
     }
 
