@@ -2,6 +2,9 @@ package tech.d4njan.pessoas;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.ZoneId;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -9,6 +12,7 @@ public class Pessoa {
 
     protected String nome;
     protected Date dataNascimento;
+    protected int idade;
 
     protected String dataTemporaria;
 
@@ -51,7 +55,10 @@ public class Pessoa {
 
     public String obterIdade() {
 
-		return "";
+		LocalDate dataAtual = LocalDate.now();
+        LocalDate dataNascimentoLocalDate = dataNascimento.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+        idade = Period.between(dataNascimentoLocalDate, dataAtual).getYears();
+        return "Idade: " + idade + " anos.";
 
 	}
 
