@@ -9,18 +9,20 @@ public class Telefone {
 
 	Scanner sc2 = new Scanner(System.in);
 
-	public int getDdd() {
-		return ddd;
-	}
-	public void setDdd(int ddd) {
-		this.ddd = ddd;
-	}
-	public String getNumero() {
-		return numero;
-	}
-	public void setNumero(String numero) {
-		this.numero = numero;
-	}
+    // Gets e Sets
+
+        public int getDdd() {
+            return ddd;
+        }
+        public void setDdd(int ddd) {
+            this.ddd = ddd;
+        }
+        public String getNumero() {
+            return numero;
+        }
+        public void setNumero(String numero) {
+            this.numero = numero;
+        }
 
 	public void cadastrar() {
 
