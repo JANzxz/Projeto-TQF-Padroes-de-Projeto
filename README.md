@@ -9,4 +9,7 @@ Projeto da cadeira de **Padrões de Projeto** usando herança, polimorfismo e en
 ### Autores:
 
 - João Vitor Pereira - @JANzxz;
-- Danilo Pereira - @d4nkali.
+- Danilo Pereira - @d4nkali;
+- Lucas Viana - @lucasvna;
+- Miguel Rodrigues - @MiguelRodriguesCRN;
+- Leonardo Santos - @LeoFhin.
