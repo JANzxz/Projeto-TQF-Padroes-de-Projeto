@@ -1,6 +1,7 @@
 package tech.d4njan.pessoas;
 
 public class Funcionario extends Pessoa {
+
     private String nome;
     private Cargo cargo;
     private float salario;
@@ -8,15 +9,19 @@ public class Funcionario extends Pessoa {
     private int matricula;
 
     public enum Cargo {
+
         PADEIRO,
         CONFEITEIRO,
         ATENDENTE,
         GERENTE;
+
     }
 
     public Funcionario(String nome, Cargo cargo) {
+
         this.nome = nome;
         this.cargo = cargo;
+
     }
 
     public String getNome() {
@@ -53,17 +58,21 @@ public class Funcionario extends Pessoa {
 
     // Método para reajustar o salário
     public void reajustarSalario(float percentual) {
+
         if (percentual > 0) {
             this.salario += this.salario * (percentual / 100);
         } else {
             System.out.println("O percentual de reajuste deve ser positivo.");
         }
+
     }
 
     // Método para promover o funcionário
     public void promover(Cargo novoCargo) {
+
         this.cargo = novoCargo;
         System.out.println("Funcionário promovido para o cargo de " + novoCargo);
+
     }
 
     @Override
@@ -76,4 +85,5 @@ public class Funcionario extends Pessoa {
             ", matricula=" + matricula +
             '}';
     }
+
 }

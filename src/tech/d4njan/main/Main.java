@@ -1,4 +1,5 @@
 package tech.d4njan.main;
+
 import tech.d4njan.pessoas.Cliente;
 import tech.d4njan.pessoas.Funcionario;
 import tech.d4njan.composicao.Profissao;
@@ -12,6 +13,7 @@ public class Main {
     private static List<Funcionario> funcionarios = new ArrayList<>(); // Lista de funcionários
 
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
         boolean continuar = true;
 

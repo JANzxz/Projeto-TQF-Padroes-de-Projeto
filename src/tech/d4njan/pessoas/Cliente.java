@@ -14,21 +14,23 @@ public class Cliente extends Pessoa {
 
     }
 
-    public String getCodigo() {
-        return codigo;
-    }
+    // Gets e Sets
 
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
-    }
+        public String getCodigo() {
+            return codigo;
+        }
 
-    public Profissao getProfissao() {
-        return profissao;
-    }
+        public void setCodigo(String codigo) {
+            this.codigo = codigo;
+        }
 
-    public void setProfissao(Profissao profissao) {
-        this.profissao = profissao;
-    }
+        public Profissao getProfissao() {
+            return profissao;
+        }
+
+        public void setProfissao(Profissao profissao) {
+            this.profissao = profissao;
+        }
 
     @Override
     public String toString() {
