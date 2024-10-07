@@ -18,6 +18,7 @@ public class Main {
         boolean continuar = true;
 
         while (continuar) {
+
             // Exibe o menu principal
             System.out.println("MENU PRINCIPAL");
             System.out.println("1. Gerenciar Funcionários");
@@ -28,6 +29,7 @@ public class Main {
             int opcao = scanner.nextInt();
 
             switch (opcao) {
+
                 case 1:
                     // Menu para funcionários
                     menuFuncionarios(scanner);
@@ -42,9 +44,11 @@ public class Main {
                     break;
                 default:
                     System.out.println("Opção inválida! Tente novamente.");
+
             }
-        }
-        scanner.close();
+
+        } scanner.close();
+
     }
 
     // Menu para funcionários
@@ -52,6 +56,7 @@ public class Main {
         boolean continuar = true;
 
         while (continuar) {
+
             System.out.println("MENU FUNCIONÁRIOS");
             System.out.println("1. Adicionar Funcionário");
             System.out.println("2. Reajustar Salário");
@@ -82,7 +87,9 @@ public class Main {
                 default:
                     System.out.println("Opção inválida! Tente novamente.");
             }
+
         }
+
     }
 
     // Menu para clientes
