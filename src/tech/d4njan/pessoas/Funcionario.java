@@ -7,7 +7,7 @@ public class Funcionario extends Pessoa {
     private String dataAdmissao;
     private int matricula;
 
-    enum Cargo {
+    public enum Cargo {
         PADEIRO,
         CONFEITEIRO,
         ATENDENTE,
