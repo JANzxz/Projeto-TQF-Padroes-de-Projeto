@@ -1,7 +1,5 @@
 package tech.d4njan.pessoas;
 
-import java.util.Scanner;
-
 public class Funcionario extends Pessoa {
     private String nome;
     private Cargo cargo;
@@ -53,44 +51,29 @@ public class Funcionario extends Pessoa {
         this.dataAdmissao = dataAdmissao;
     }
 
+    // Método para reajustar o salário
+    public void reajustarSalario(float percentual) {
+        if (percentual > 0) {
+            this.salario += this.salario * (percentual / 100);
+        } else {
+            System.out.println("O percentual de reajuste deve ser positivo.");
+        }
+    }
+
+    // Método para promover o funcionário
+    public void promover(Cargo novoCargo) {
+        this.cargo = novoCargo;
+        System.out.println("Funcionário promovido para o cargo de " + novoCargo);
+    }
+
     @Override
     public String toString() {
         return "Funcionario{" +
-                "nome='" + nome + '\'' +
-                ", cargo=" + cargo +
-                '}';
-    }
-
-    public class Main {
-        public static void main(String[] args) {
-            Scanner scanner = new Scanner(System.in);
-
-            System.out.print("Digite o nome do funcionário: ");
-            String nome = scanner.nextLine();
-
-            System.out.println("Escolha o cargo do funcionário:");
-            for (Cargo c : Cargo.values()) {
-                System.out.println(c.ordinal() + 1 + ". " + c);
-            }
-
-            System.out.print("Digite o salário do funcionário: ");
-            float salario = scanner.nextFloat();
-
-            System.out.print("Digite a matrícula do funcionário: ");
-            int matricula = scanner.nextInt();
-
-            System.out.print("Digite a data de admissão do funcionário: ");
-            String dataAdmissao = scanner.nextLine();
-
-            int cargoEscolhido = scanner.nextInt() - 1;
-            Cargo cargo = Cargo.values()[cargoEscolhido];
-
-            Funcionario funcionario = new Funcionario(nome, cargo);
-            System.out.println(funcionario);
-
-            scanner.close();
-        }
-
-
+            "nome='" + nome + '\'' +
+            ", cargo=" + cargo +
+            ", salario=" + salario +
+            ", dataAdmissao='" + dataAdmissao + '\'' +
+            ", matricula=" + matricula +
+            '}';
     }
 }
