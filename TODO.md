@@ -5,10 +5,10 @@
 
 # Preparado (3):
 
-- [ ]Reorganizar `Main`
 
 # Em progresso (5):
 
+- [ ]Reorganizar `Main`
 
 
 # Feito:
