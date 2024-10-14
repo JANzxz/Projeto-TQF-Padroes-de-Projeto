@@ -8,7 +8,7 @@ import tech.d4njan.composicao.Profissao;
 public class Cliente extends Pessoa {
 
     //? Cria uma lista dos clientes
-    private static List<Cliente> clientes = new ArrayList<>();
+    private static List<Cliente> listaClientes = new ArrayList<>();
 
     private String codigo;
     private Profissao profissao;
@@ -22,14 +22,14 @@ public class Cliente extends Pessoa {
 
     public static void listarClientes() { //* Função para listar os clientes cadastrados
 
-        if (clientes.isEmpty()) {
+        if (listaClientes.isEmpty()) {
             System.out.println("Nenhum cliente cadastrado.");
         } 
 
         else {
 
             System.out.println("Clientes:");
-            for (Cliente cliente : clientes) {
+            for (Cliente cliente : listaClientes) {
                 System.out.println(cliente);
             }
 
@@ -52,8 +52,8 @@ public class Cliente extends Pessoa {
         scanner.nextLine();
 
         Cliente cliente = new Cliente(nome, profissao);
-        cliente.setCodigo("C" + (clientes.size() + 1));
-        clientes.add(cliente);
+        cliente.setCodigo("C" + (listaClientes.size() + 1));
+        listaClientes.add(cliente);
 
         System.out.println("Cliente adicionado: " + cliente);
 
@@ -67,7 +67,7 @@ public class Cliente extends Pessoa {
         System.out.print("Digite o código do cliente que deseja atualizar: ");
         String codigo = scanner.nextLine();
 
-        for (Cliente cliente : clientes) {
+        for (Cliente cliente : listaClientes) {
 
             if (cliente.getCodigo().equalsIgnoreCase(codigo)) {
 
@@ -104,7 +104,7 @@ public class Cliente extends Pessoa {
         String codigo = scanner.nextLine();
 
         Cliente clienteParaRemover = null;
-        for (Cliente cliente : clientes) {
+        for (Cliente cliente : listaClientes) {
 
             if (cliente.getCodigo().equalsIgnoreCase(codigo)) {
 
@@ -117,7 +117,7 @@ public class Cliente extends Pessoa {
 
         if (clienteParaRemover != null) {
 
-            clientes.remove(clienteParaRemover);
+            listaClientes.remove(clienteParaRemover);
             System.out.println("Cliente removido: " + clienteParaRemover);
 
         } 
