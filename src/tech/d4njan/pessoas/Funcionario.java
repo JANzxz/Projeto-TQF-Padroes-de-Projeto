@@ -136,6 +136,14 @@ public class Funcionario extends Pessoa {
             this.salario = salario;
         }
 
+        public Cargo getCargo() {
+            return cargo;
+        }
+
+        public void setCargo(Cargo cargo) {
+            this.cargo = cargo;
+        }
+
     // Método To String
     @Override
     public String toString() {
