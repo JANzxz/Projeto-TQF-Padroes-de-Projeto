@@ -6,9 +6,9 @@
 # Preparado (3):
 
 
+
 # Em progresso (5):
 
-- [ ]Reorganizar `Main`
 
 
 # Feito:
@@ -27,3 +27,4 @@
 - [x] Classe `Main`;
 - [x] Classe `Endereco`;
 - [x] Classe `Cliente`
+- [x]Reorganizar `Main`
